@@ -12,7 +12,16 @@ The principles guiding the tool include:
 * High quality bar in all releases by embedded testing in nightly builds
 * Extensible plug-in architecture for future tools
 
+## Frequently Asked Questions
 
+### Can I still use the old tools?
+Yes, until we introduce a breaking change to the protocol (no plan yet).
+
+### What about all issues, improvement requests that were filed for the old tool?
+We have ported, and will address all issues in the new tool.
+
+### Is there a cut-off date for the old tools?
+Not yet, but in general as soon as the the functionality is available for General Availability the old tools will be assumed deprecated.
 
 ## Tool Command Map
 
