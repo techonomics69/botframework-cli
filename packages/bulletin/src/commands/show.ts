@@ -53,7 +53,7 @@ export default class Show extends Command {
     var ref = msg["referenceUrl"];
 	var also = msg["seeAlso"];
 	
-	this.log(title);
+	this.log("-=<< " + title + " >>=-");
 	this.log(body);
 	this.log("---");
 	this.log("Date     :\t" + date);
