@@ -3,13 +3,16 @@
 [![Build Status](https://fuselabs.visualstudio.com/SDK_v4/_apis/build/status/CLI/Botframework-CLI-CI-PR?branchName=master)](https://fuselabs.visualstudio.com/SDK_v4/_build/latest?definitionId=537&branchName=master)
 [![Coverage Status](https://coveralls.io/repos/github/microsoft/botframework-cli/badge.svg?branch=master)](https://coveralls.io/github/microsoft/botframework-cli?branch=master)
 
-As part of the effort to improve Bot Framework SDK toolset we are happy to announce the introduction of a new Command Line Interface tool which will eventually replace the suite of tools currently used during Bot development. The new CLI, called BF is being released as an early preview. We have migrated Chatdown as a first proof of concept plugin. The new Chatdown plugin is fully functional and identical to the standalone tool (with some minor usage bug fixes). Early adopters are welcome to switch to the new CLI. In the meantime the old and new tools will exist side by side for at least a full release cycle.
+As part of the effort to improve Bot Framework SDK toolset we are happy to announce the introduction of a new Command Line Interface tool which will eventually replace the suite of tools currently used during Bot development. The new CLI, called BF is being released with the Bot Framework 4.6 version release. The legacy tools will be migrated in phases with the first wave including the following functionality. 
 
 ## Available Commands
 The following commands are currently available:
-* [Chatdown](https://github.com/microsoft/botframework-cli/tree/master/packages/cli#bf-chatdown) 
-* [QnAMaker (Preview)](https://github.com/microsoft/botframework-cli/tree/master/packages/cli#bf-qnamaker)
-* [Config](https://github.com/microsoft/botframework-cli/tree/master/packages/cli#bf-config)
+* [Chatdown](https://github.com/microsoft/botframework-cli/tree/master/packages/chatdown) : Direct port of ~chatdown~ CLI.
+* [QnAMaker](https://github.com/microsoft/botframework-cli/tree/master/packages/qnamaker) : Direct port of ~QnAMaker~ CLI.
+* [Luis](https://github.com/microsoft/botframework-cli/tree/master/packages/luis) : Port of LuDown. This command group will include the LUIS API in the future.
+* [Config](https://github.com/microsoft/botframework-cli/tree/master/packages/config) : Global CLI configuraiton management
+
+In the meantime the old and new tools will exist side by side for at least a full release cycle.
 
 ## Plugin Architecture
 BF CLI is based on [OClif](https://github.com/oclif/oclif) Framework and inherits its command line parsing style, and plugin architecture. 
@@ -40,7 +43,7 @@ Privacy is very important to us. BF CLI contains optional instrumentation that i
 
 At any time you may disable data collection by changing the configuration using command:
 ~~~ 
-bf config:telemetry:disable
+bf config:set:telemetry -d
 ~~~
 
 Please refer to [Microsoft Privacy Statement](https://privacy.microsoft.com/en-US/privacystatement) for more details.  
