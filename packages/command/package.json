@@ -53,7 +53,8 @@
     "posttest": "tsc -p test --noEmit && tslint -p test -t stylish",
     "prepublishOnly": "rimraf lib && tsc -b",
     "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
-    "testcoveralls": "mocha --forbid-only \"test/**/*.test.{ts,js}\""
+    "testcoveralls": "mocha --forbid-only \"test/**/*.test.{ts,js}\"",
+    "upload-coveralls": "nyc report --reporter=text-lcov | coveralls"
     },
   "types": "./lib/index.d.ts"
 }
