@@ -76,7 +76,7 @@
     "posttest": "tslint -p test -t stylish",
     "prepack": "rimraf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
     "version": "oclif-dev readme && git add README.md",
-    "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.{ts,js}\"",
+    "test": "nyc mocha \"test/**/*.test.{ts,js}\"",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "maindoc": "rimraf lib && tsc -b && oclif-dev manifest && oclif-dev readme && rimraf oclif.manifest.json"
   },
