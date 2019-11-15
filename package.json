@@ -5,9 +5,7 @@
     "build": "lerna run build && lerna bootstrap",
     "generate-md": "npm run build && lerna run documentation && lerna run maindoc && node scripts/fixurls.js",
     "test": "lerna run test",
-    "coverage": "nyc npm test",
-    "coveralls": "lerna run testcoveralls",
-    "upload-coveralls": "nyc report --reporter=text-lcov | coveralls"
+    "coverage": "lerna run coverage",
   },
   "private": true,
   "devDependencies": {
